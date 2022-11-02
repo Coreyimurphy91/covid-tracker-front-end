@@ -10,7 +10,7 @@ const Footer = () => {
           <Bars />
           <NavMenu>
             <a className="footLink" href='https://www.vaccines.gov/'>
-              Find a vaccine center near you
+              Find a vaccination center near you
             </a>
             <NavLink to='/services'>
               Services
@@ -18,15 +18,10 @@ const Footer = () => {
             <NavLink to='/contact-us'>
               Contact Us
             </NavLink>
-            <NavLink to='/sign-up'>
-              Sign Up
-            </NavLink>
-            {/* Second Nav */}
-            {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+            <a className="footLink" href='https://www.covid.gov/tests'>
+              Find Covid tests
+            </a>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-          </NavBtn>
         </Nav>
       </>
     );

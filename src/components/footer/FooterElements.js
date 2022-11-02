@@ -11,11 +11,10 @@ export const Nav = styled.nav`
   padding: 0.5rem calc((100vw - 1200px) / 2);
   z-index: 10;
   border-top: 3px solid green;
-//   border-bottom-left-radius: 20px;
   border-top-left-radius: 40px;
 
   /* Third Nav */
-  /* justify-content: flex-start; */
+//   justify-content: flex-start;
 `;
 
 export const NavLink = styled(Link)`
@@ -58,7 +57,7 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -24px;
+//   margin-right: -24px;
 
   /* Second Nav */
   /* margin-right: 24px; */
