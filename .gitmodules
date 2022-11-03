@@ -1,0 +1,3 @@
+[submodule "react-covid-tracker"]
+	path = react-covid-tracker
+	url = https://github.com/makaio519/react-covid-tracker.git
