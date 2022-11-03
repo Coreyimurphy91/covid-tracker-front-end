@@ -16,7 +16,7 @@ import {
   Select,
   Card,
   CardContent,
-} from "@material-ui/core";
+} from "@mui/material";
 import InfoBox from "./InfoBox";
 import LineGraph from "./LineGraph";
 import Table from "./Table";
@@ -26,19 +26,19 @@ import Map from "./Map";
 import "leaflet/dist/leaflet.css";
 
 
-function App() {
+// function App() {
 
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
-}
+//   return (
+//     <Router>
+//       <Navbar />
+//       <Routes>
+//         <Route exact path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//       </Routes>
+//       <Footer />
+//     </Router>
+//   );
+// }
 
 
 const App = () => {
