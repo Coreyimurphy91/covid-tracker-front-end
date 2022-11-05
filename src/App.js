@@ -9,6 +9,8 @@ import LineChart from './components/LineChart';
 import PieChart from './components/PieChart';
 import Home from './components/Home';
 import About from './components/About';
+import HealthProfile from './components/HealthProfile';
+
 
 import {
   MenuItem,
@@ -98,7 +100,13 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <Router>
+      <Routes>
+        {/* <Route exact path="/" element={<Home />} /> */}
+        <Route path="/about" element={<About />} />
+        <Route path="/healthprofile" element={<HealthProfile />} />
+      </Routes>
+      <Navbar />
       <div className="app__left">
         <div className="app__header">
           <h1>COVID-19 Tracker</h1>
@@ -157,7 +165,7 @@ const App = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
+    </Router>
   );
 };
 
