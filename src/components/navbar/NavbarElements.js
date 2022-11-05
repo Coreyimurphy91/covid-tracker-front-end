@@ -10,8 +10,8 @@ export const Nav = styled.nav`
   padding: 0.5rem calc((100vw - 1200px) / 2);
   z-index: 10;
   border-bottom: 3px solid green;
-//   border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  // border-bottom-right-radius: 40px;
 
   /* Third Nav */
   /* justify-content: flex-start; */

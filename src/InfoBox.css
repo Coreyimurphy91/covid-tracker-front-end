@@ -7,15 +7,19 @@
   }
   
   .infoBox--selected {
-    border-top: 10px solid greenyellow;
+    border-top: 10px solid rgb(166, 196, 138);
   }
   
   .infoBox--red {
     border-color: red;
   }
   
+  .infoBox--purple {
+    border-color: #856084;
+  }
+
   .infoBox__cases--green {
-    color: lightgreen !important;
+    color: rgb(166, 196, 138) !important;
   }
   
   .infoBox__cases {

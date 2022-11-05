@@ -14,8 +14,8 @@ const Navbar = () => {
             <NavLink to='/about'>
               About
             </NavLink>
-            <NavLink to='/services'>
-              Services
+            <NavLink to='/healthprofile'>
+              Health Profile
             </NavLink>
             <NavLink to='/contact-us'>
               Contact Us
