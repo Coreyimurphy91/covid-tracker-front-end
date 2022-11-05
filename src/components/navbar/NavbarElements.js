@@ -9,7 +9,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1200px) / 2);
   z-index: 10;
-  border-bottom: 3px solid green;
+  border-bottom: 3px solid rgb(103, 141, 88);
   border-bottom-left-radius: 40px;
   // border-bottom-right-radius: 40px;
 

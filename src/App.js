@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes, Redirect, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes, Navigate, BrowserRouter as Router } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
+import setAuthToken from './utils/setAuthToken';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
@@ -10,6 +12,7 @@ import PieChart from './components/PieChart';
 import Home from './components/Home';
 import About from './components/About';
 import HealthProfile from './components/HealthProfile';
+import Signup from './components/Signup';
 
 
 import {
@@ -27,8 +30,48 @@ import numeral from "numeral";
 import Map from "./Map";
 import "leaflet/dist/leaflet.css";
 
+const PrivateRoute = ({ component: Component, ...rest}) => {
+  let token = localStorage.getItem('jwtToken');
+  console.log('===> Hitting a Private Route');
+  return <Route {...rest} render={(props) => {
+    return token ? <Component {...rest} {...props} /> : <Navigate to="/login"/>
+  }} />
+}
+
 const App = () => {
   
+  // Set state values
+  const [currentUser, setCurrentUser] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
+
+ 
+  useEffect(() => {
+    let token;
+
+    if (!localStorage.getItem('jwtToken')) {
+      setIsAuthenticated(false);
+      console.log('====> Authenticated is now FALSE');
+    } else {
+      token = jwt_decode(localStorage.getItem('jwtToken'));
+      setAuthToken(localStorage.getItem('jwtToken'));
+      setCurrentUser(token);
+    }
+  }, []);
+
+  const nowCurrentUser = (userData) => {
+    console.log('===> nowCurrent is here.');
+    setCurrentUser(userData);
+    setIsAuthenticated(true);
+  }
+
+  const handleLogout = () => {
+    if (localStorage.getItem('jwtToken')) {
+      // remove token for localStorage
+      localStorage.removeItem('jwtToken');
+      setCurrentUser(null);
+      setIsAuthenticated(false);
+    }
+  }
 
   return (
     <Router>
@@ -37,6 +80,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/healthprofile" element={<HealthProfile />} />
+        <Route path="/sign-up" element={<Signup />} />
       </Routes>
     </Router>
   );
