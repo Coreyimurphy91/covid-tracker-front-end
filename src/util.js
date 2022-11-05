@@ -10,9 +10,9 @@ const casesTypeColors = {
     multiplier: 100,
   },
   recovered: {
-    hex: "#A6C48A",
-    rgb: "rgb(166, 196, 138)",
-    half_op: "rgba(166, 196, 138, 0.5)",
+    hex: "#678D58",
+    rgb: "rgb(103, 141, 88)",
+    half_op: "rgba(103, 141, 88, 0.5)",
     multiplier: 100,
   },
   deaths: {
