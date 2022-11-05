@@ -5,7 +5,6 @@ import "../InfoBox.css";
 
 const HealthProfile = (props, active, isRed) => {
     return(
-        
         <Card>
             <CardContent >
                 <Typography color="textSecondary" gutterBottom>
