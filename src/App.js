@@ -15,6 +15,7 @@ import About from './components/About';
 import HealthProfile from './components/HealthProfile';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import StateForm from './components/StateForm';
 
 
 import {
@@ -85,6 +86,7 @@ const App = () => {
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/log-in" element={<Login />} />
         <Route path="/USA" element={<UsHome />} />
+        <Route path="/forms" element={<StateForm />} />
       </Routes>
     </Router>
   );

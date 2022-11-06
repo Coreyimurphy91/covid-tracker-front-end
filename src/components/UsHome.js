@@ -41,7 +41,7 @@ const UsHome = () => {
         .then((response) => response.json())
         .then((data) => {
           const states = data.map((state) => ({
-            name: state.state,
+            name: states.state,
             value: state.stateInfo.iso2,
           }));
           let sortedData = sortData(data);
