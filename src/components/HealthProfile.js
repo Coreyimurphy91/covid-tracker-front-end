@@ -1,28 +1,22 @@
 import React from 'react';
-import { Card, CardContent, Typography } from "@mui/material";
-import "../InfoBox.css";
+import { Link } from 'react-router-dom';
+import '../App.css'
 
 
 const HealthProfile = (props, active, isRed) => {
-    return(
-        <Card raised="true">
-            <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                    <h1>User</h1>
-                </Typography>
-            </CardContent>
-            <CardContent>
-                <Typography color="textSecondary">
-                    <h1>Saved Locations</h1>
-                </Typography>
-            </CardContent>
-            <CardContent>
-                <Typography color="textSecondary">
-                    <h1>Comments</h1>
-                </Typography>
-            </CardContent>
-        </Card>
-        
+    return (
+        <div>
+            <div className="container pt-5 my-5 border cardBg">
+                <h1 className="center">{/* {user} */}User's Health Profile</h1>
+            </div>
+            <div className="container my-5 border cardBg">
+                <h2>My Vaccines</h2>
+            </div>
+            <div className="container my-5 border cardBg">
+                <h2>Saved locations</h2>
+            </div>
+        </div>
+
     )
 }
 

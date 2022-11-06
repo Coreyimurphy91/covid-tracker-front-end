@@ -6,6 +6,17 @@ body {
   background-color: #f5f6fa;
 }
 
+.center {
+  text-align: center;
+}
+
+.cardBg {
+  color: #856084;
+  background: white;
+  border-radius: 12px;
+  padding-bottom: 2rem;
+}
+
 .app {
   display: flex;
   justify-content: space-evenly;
