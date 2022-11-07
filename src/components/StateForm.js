@@ -73,6 +73,7 @@ const StateForm = () => {
 					<option name="state" value="WY">Wyoming</option>
 				</select>
 			</form>
+			<p>{usState.state}</p>
 		</div>
 	)
 }

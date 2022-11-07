@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const StateForm = () => {
 
+    const [usCounty, setUsCounty] = useState('');
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        const newCounty = e.target.value;
         console.log(e.target[0].value)
+        setUsCounty({
+            county: newCounty
+        })
     }
 
 
