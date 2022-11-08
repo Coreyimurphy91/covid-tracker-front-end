@@ -22,6 +22,7 @@ export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
+  font-size: 1.5em;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
@@ -33,9 +34,9 @@ export const NavLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     color: #856084;
-    font-size: 1.25em;
     height: 84px;
     width: auto;
+    text-decoration: none;
   }
 `;
 
@@ -103,5 +104,6 @@ export const NavBtnLink = styled(Link)`
     transition: all 0.2s ease-in-out;
     background: #D4ADCF;
     color: #010606;
+    text-decoration: none;
   }
 `;

@@ -10,9 +10,13 @@ import DoughnutChart from './components/DoughnutChart';
 import LineChart from './components/LineChart';
 import PieChart from './components/PieChart';
 import Home from './components/Home';
+import UsHome from './components/UsHome';
 import About from './components/About';
 import HealthProfile from './components/HealthProfile';
 import Signup from './components/Signup';
+import Login from './components/Login';
+import StateForm from './components/StateForm';
+import CountyForm from './components/CountyForm';
 
 
 import {
@@ -79,8 +83,12 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/healthprofile" element={<HealthProfile />} />
+        <Route path="/healthprofile" element={<HealthProfile />} user={currentUser} handleLogout={handleLogout} />
         <Route path="/sign-up" element={<Signup />} />
+        <Route path="/log-in" element={<Login />} />
+        <Route path="/USA" element={<UsHome />} />
+        <Route path="/stateform" element={<StateForm />} />
+        <Route path="/countyform" element={<CountyForm />} />
       </Routes>
     </Router>
   );

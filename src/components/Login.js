@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
-import { Redirect } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import setAuthToken from '../utils/setAuthToken';
 
 const { REACT_APP_SERVER_URL } = process.env;
@@ -41,7 +41,7 @@ const Login = (props) => {
         });
     }
 
-    if (props.user) return <Redirect to="/profile" /> // double check
+    if (props.user) return <Navigate to="/profile" /> // double check
 
     return (
         <div className="row mt-4">
@@ -59,6 +59,7 @@ const Login = (props) => {
                         </div>
                         <button type="submit" className="btn btn-primary float-right">Submit</button>
                     </form>
+                    <p className="center">Need an account? <Link to='sign-in'>Sign-in</Link> here</p>
                 </div>
             </div>
         </div>

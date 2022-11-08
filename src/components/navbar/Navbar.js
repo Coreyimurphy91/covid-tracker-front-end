@@ -11,6 +11,9 @@ const Navbar = () => {
           </NavLink>
           <Bars />
           <NavMenu>
+            <NavLink to='/usa'>
+              USA
+            </NavLink>
             <NavLink to='/about'>
               About
             </NavLink>
@@ -20,14 +23,12 @@ const Navbar = () => {
             <NavLink to='/contact-us'>
               Contact Us
             </NavLink>
-            <NavLink to='/sign-up'>
-              Sign Up
-            </NavLink>
             {/* Second Nav */}
             {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to='/signin'>Log In</NavBtnLink>
+            <NavBtnLink to='/log-in'>Log In</NavBtnLink>
+            <NavBtnLink to='/sign-up'>Sign Up</NavBtnLink>
           </NavBtn>
         </Nav>
       </>

@@ -1,7 +1,7 @@
 // Imports
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 const { REACT_APP_SERVER_URL } = process.env;
 
 const Signup = () => {
@@ -72,6 +72,7 @@ const Signup = () => {
                         </div>
                         <button type="submit" className="btn btn-primary float-right">Submit</button>
                     </form>
+                    <p className="center">Already have an account? <Link to='log-in'>Log-in</Link> here</p>
                 </div>
             </div>
         </div>
